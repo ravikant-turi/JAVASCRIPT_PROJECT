@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Coin Toss</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.3/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .loader {
+        border-top-color: transparent;
+        animation: spin 1s linear infinite;
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-800 text-white">
+    <h1 class="text-center text-3xl mt-20 font-bold" id="#result">
+      Coin Toss Web
+    </h1>
+    <div class="flex flex-col items-center justify-center">
+      <div
+        id="loader"
+        class="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-20 w-20 hidden"
+      ></div>
+    <div>
+      
+      <button
+        id="#tossbtn"
+        onclick="tossHandler()"
+        class="hover:scale-145 cursor-pointer  bg-green-600  text-white px-4 py-2 rounded mt-5 ml-2"
+      >
+        Toss
+      </button>
+    </div>
+    </div>
+
+   
+    <script src="app.js">
+
+      function showLoader() {
+              document.getElementById('loader').classList.remove('hidden');
+          }
+
+          function hideLoader() {
+              document.getElementById('loader').classList.add('hidden');
+          }
+    </script>
+  </body>
+</html>
