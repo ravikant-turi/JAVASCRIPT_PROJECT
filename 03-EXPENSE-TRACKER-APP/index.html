@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- cdn link for font  -->
+
+    <link rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+     crossorigin="anonymous" 
+     referrerpolicy="no-referrer" />
+        
+
+     <!-- link for the external css file style.css -->
+
+     <link rel="stylesheet" href="Style.css">
+
+    <title>Expense-Tracker-App</title>
+    
+  </head>
+  <body>
+    
+      <div class="container">
+        <h1 class="expence-title" style="text-align: center;">Expense-Tracker-App</h1>
+
+      <!-- Balance -->
+      <div class="balance">
+        <h2 id="tbalance">$0.00 </h2>
+        <h4 id="current-balace">Current Balance</h4>
+      </div>
+
+      <!-- Income Expence -->
+
+      <div class="inc-exp-container">
+        <div class="income">
+          <h2 id="income">$0.00 <i class="fa-solid fa-sort-up"></i></h2>
+          <h4>Income</h4>
+        </div>
+
+        <div class="expense">
+          <h2 id="expence">$0.00 <i class="fa-solid fa-sort-down"></i></h2>
+          <h4>Expence</h4>
+        </div>
+      </div>
+
+
+      <!-- History -->
+      <div class="history">
+        <h2 class="title-history">History</h2>
+        
+        <ul  class="history-box" id="list" >
+         
+            <li class="plus " >
+            <h4>Payment</h4>
+            <span style="font-weight: bold; margin-right: 4px;">+$100 
+                <i class="fa-solid fa-sort-up"></i>
+                <i class="fa-solid fa-trash-alt"></i>
+            </span>
+          </li>
+          
+
+          <li class="minus" >
+            <h4>Payment</h4>
+            <span style="font-weight: bold; margin-right: 4px;">+$100 
+                <i class="fa-solid fa-sort-up"></i>
+                <i class="fa-solid fa-trash-alt"></i>
+            </span>
+          </li>
+
+
+        </ul>
+      </div>
+
+      <!-- Add Transaction -->
+
+      <div class="transaction">
+        <h2 class="transaction-title">Add New Transaction</h2>
+        <form action="#" class="transction-form" id="form">
+        <input
+          type="text"
+          id="text"
+          class="for-text"
+          placeholder="insert text here (eg. salary)"
+        />
+        <input
+          type="number"
+          id="amount"
+          class="for-amount"
+          placeholder="insert amount here (eg.+100)"
+        />
+        <button class="btn">Add Transaction</button>
+    </form>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
